@@ -2,7 +2,7 @@ INC_DIR:= ./
 SRC_DIR:= ./
 SRCS:=$(wildcard *.cc)
 OBJS:= $(patsubst %.cc, %.o, $(SRCS))
-LIBS:= -lpthread
+LIBS:=  /usr/lib/x86_64-linux-gnu/libmysqlclient.so
 
 CXX:=g++
 

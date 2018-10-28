@@ -1,13 +1,12 @@
  ///
  /// @file    test.cc
  /// @author  hessen(dhxsy1994@gmail.com)
- /// @date    2018-10-25 20:07:59
- 
+ /// @date    2018-10-28 23:56:32
+ ///
 
 
-#include <iostream>
-#include <ostream>
 #include "Config.h"
+#include "Mysql.h"
 using std::cout;
 using std::cin;
 
@@ -23,5 +22,9 @@ int main(int argc,char* argv[])
 	ext::Config con(path);
 	con.ReadConfig();	
 	con.Test();
+	sql::Mysql s(con);
+	s.Connection();
+	s.My_status();
 
-}
+
+} 
